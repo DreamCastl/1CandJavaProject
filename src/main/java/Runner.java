@@ -17,8 +17,6 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        //  SubstituteInTemplate(1, "D:\\v8_ih8vQl_9.txt");
-
         Map<String,String> rez = new HashMap<>();
       //  System.out.println(ComputeJson("D:\\v8_9uaLVd_106.txt"));
 
@@ -56,7 +54,7 @@ public class Runner {
         json = json.replace("\uFEFF", "");
 
         Map map = JsonToMap(json);
-        String action = (String) map.get("Action");
+        String action = (String) map.get("Действие");
         if (action == null || action.equals("word")) {
             SubstituteInTemplate substituteInTemplate = new SubstituteInTemplate();
             ParamDocument param = new ParamDocument(map);
@@ -65,9 +63,9 @@ public class Runner {
         else if (action.toLowerCase(Locale.ROOT).equals("convert".toLowerCase(Locale.ROOT))){
 
             return ConverterFormat.ConvertToNeedFormat(
-                    (String) map.get("fileWay"),
-                    (String) map.get("Extension"),
-                    (String) map.get("recipient")
+                    (String) map.get("НазваниеФайла"),
+                    (String) map.get("Расширение"),
+                    (String) map.get("ФайлРезультат")
             );
         }
         return "";

@@ -28,7 +28,7 @@
               </filters>
               <transformers>
                 <transformer>
-                  <mainClass>WorkWithDocument.SubstituteInTemplate</mainClass>
+                  <mainClass>Runner.Main</mainClass>
                 </transformer>
               </transformers>
             </configuration>

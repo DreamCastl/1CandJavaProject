@@ -31,14 +31,13 @@ public class ConverterFormat {
     }
 
     public static String ConvertToNeedFormat(String fileWay, String extension, String recipient) {
-     String rez = recipient;
 
         if (extension.equals("eml")) {
             File f = new File(fileWay);
             String textEML = EmailConverter.outlookMsgToEML(f);
             FileWriter nFile = null;
             try {
-                nFile = new FileWriter("D:\\test2.eml");
+                nFile = new FileWriter(recipient);
                 nFile.write(textEML);
                 nFile.close();
             } catch (IOException e) {
@@ -46,7 +45,7 @@ public class ConverterFormat {
             }
             return fileWay;
         } else {
-            return rez;
+            return recipient;
         }
 
     }
