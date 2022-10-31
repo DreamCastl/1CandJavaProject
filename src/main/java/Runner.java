@@ -18,7 +18,7 @@ public class Runner {
     public static void main(String[] args) {
 
         Map<String,String> rez = new HashMap<>();
-      //  System.out.println(ComputeJson("D:\\v8_9uaLVd_106.txt"));
+       // System.out.println(ComputeJson("D:\\file.txt"));
 
         for (int i = 0; i < args.length; i++) {
             try {
